@@ -872,7 +872,7 @@ h3.post-title a:hover {
 }
 ]]></b:skin>
 
-   <LINK REL=StyleSheet HREF="https://github.com/ddanciu/WorkBox/raw/master/Dan/skin.css" TYPE="text/css" />
+   <LINK REL="StyleSheet" HREF="https://github.com/ddanciu/WorkBox/raw/master/Dan/skin.css" TYPE="text/css" />
    
   </head>
 
