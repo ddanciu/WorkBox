@@ -1,0 +1,56 @@
+body { 
+	min-width: 860px;
+}
+
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+	min-width: 860px;
+	max-width: 860px;
+	_width: 860px;
+}
+
+.main-inner .columns {
+	padding-left: 0px;
+	padding-right: 260px;
+}
+
+.main-inner .fauxcolumn-center-outer {
+	left: 0px;
+	right: 260px;
+	/* IE6 does not respect left and right together */
+	_width: expression(this.parentNode.offsetWidth -
+	parseInt("0px") -
+	parseInt("260px") + 'px');
+}
+
+.main-inner .fauxcolumn-left-outer {
+	width: 0px;
+}
+
+.main-inner .fauxcolumn-right-outer {
+	width: 260px;
+}
+
+.main-inner .column-left-outer {
+	width: 0px;
+	right: 100%;
+	margin-left: -0px;
+}
+
+.main-inner .column-right-outer {
+	width: 260px;
+	margin-right: -260px;
+}
+
+#layout {
+	min-width: 0;
+}
+
+#layout .content-outer {
+	min-width: 0;
+	width: 800px;
+}
+
+#layout .region-inner {
+	min-width: 0;
+	width: auto;
+}
