@@ -13,10 +13,12 @@
 		
 		<title><data:blog.pageTitle/></title>
     
-		<b:skin><![CDATA[/* Dummy, we use CSS files test change 11.47.40*/ ]]></b:skin>
+		<b:skin><![CDATA[/* Dummy, we use CSS files. */ ]]></b:skin>
 
 		<LINK HREF='https://github.com/ddanciu/WorkBox/raw/master/Dan/css/layout.css' REL='StyleSheet' TYPE='text/css'/>
 		<LINK HREF='https://github.com/ddanciu/WorkBox/raw/master/Dan/css/skin.css' REL='StyleSheet' TYPE='text/css'/>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   </head>
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
@@ -898,8 +900,13 @@
 
   <script type='text/javascript'>
     window.setTimeout(function() {
-        document.body.className = document.body.className.replace(&quot;loading&quot;, &quot;&quot;);
-      }, 10);
+        $('body').removeClass('loading');
+    }, 10);
+    
+    $('.post-body img').load(function() {
+		$(jQuery.grep($('.post-body img'), function(img) { return $(img).width() > 400 })).width(400);
+	});
+    
   </script>
 </body>
 
