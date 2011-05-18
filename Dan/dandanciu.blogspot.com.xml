@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' 
-		xmlns='http://www.w3.org/1999/xhtml' 
-		xmlns:b='http://www.google.com/2005/gml/b' 
-		xmlns:data='http://www.google.com/2005/gml/data' 
-		xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 		
 	<head>
 		<meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
@@ -17,10 +13,10 @@
 		
 		<title><data:blog.pageTitle/></title>
     
-		<b:skin><![CDATA[/* Dummy, we use CSS files test change2 */ ]]></b:skin>
+		<b:skin><![CDATA[/* Dummy, we use CSS files test change 11.47.40*/ ]]></b:skin>
 
-		<LINK REL="StyleSheet" HREF="https://github.com/ddanciu/WorkBox/raw/master/Dan/layout.css" TYPE="text/css" />
-		<LINK REL="StyleSheet" HREF="https://github.com/ddanciu/WorkBox/raw/master/Dan/skin.css" TYPE="text/css" />
+		<LINK HREF='https://github.com/ddanciu/WorkBox/raw/master/Dan/css/layout.css' REL='StyleSheet' TYPE='text/css'/>
+		<LINK HREF='https://github.com/ddanciu/WorkBox/raw/master/Dan/css/skin.css' REL='StyleSheet' TYPE='text/css'/>
   </head>
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
@@ -490,10 +486,6 @@
 </b:includable>
 <b:includable id='main' var='top'>
 
-  <b:if cond='data:top.showDummy'>
-    <data:top.dummyBootstrap/>
-  </b:if>
-
   <b:if cond='data:mobileindex'>
     <!-- mobile index -->
     <div class='blog-posts hfeed'>
@@ -589,6 +581,11 @@
       google.setOnLoadCallback(initialize);
     </script>
   </b:if>
+
+  <b:if cond='data:top.showDummy'>
+    <data:top.dummyBootstrap/>
+  </b:if>
+
 </b:includable>
 <b:includable id='commentDeleteIcon' var='comment'>
   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
@@ -901,7 +898,7 @@
 
   <script type='text/javascript'>
     window.setTimeout(function() {
-        document.body.className = document.body.className.replace("loading", "");
+        document.body.className = document.body.className.replace(&quot;loading&quot;, &quot;&quot;);
       }, 10);
   </script>
 </body>
