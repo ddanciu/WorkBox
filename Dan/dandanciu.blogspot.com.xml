@@ -18,7 +18,8 @@
 		<LINK HREF='https://github.com/ddanciu/WorkBox/raw/master/Dan/css/layout.css' REL='StyleSheet' TYPE='text/css'/>
 		<LINK HREF='https://github.com/ddanciu/WorkBox/raw/master/Dan/css/skin.css' REL='StyleSheet' TYPE='text/css'/>
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'/>
+		<script src='https://github.com/ddanciu/WorkBox/raw/master/Dan/js/scripts.js'/>
   </head>
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
@@ -240,6 +241,7 @@
 
         <div class='column-center-outer'>
         <div class='column-center-inner'>
+		  <div>test change</div>
           <b:section class='main' id='main' showaddelement='no'>
 <b:widget id='Blog1' locked='true' title='Postări de blog' type='Blog'>
 <b:includable id='nextprev'>
@@ -622,6 +624,13 @@
     </div>
   </b:if>
 </b:includable>
+<b:includable id='comment-form-js' var='post'>
+  <data:post.friendConnectJs/>
+  <data:post.cmtfpIframe/>
+  <script type='text/javascript'>
+    BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+  </script>
+</b:includable>
 <b:includable id='mobile-index-post' var='post'>
   <b:if cond='data:post.dateHeader'>
     <div class='mobile-index-date'>
@@ -899,13 +908,7 @@
   </div>
 
   <script type='text/javascript'>
-    window.setTimeout(function() {
-        $('body').removeClass('loading');
-    }, 10);
-    
-    $('.post-body img').load(function() {
-		$(jQuery.grep($('.post-body img'), function(img) { return $(img).width() > 400 })).width(400);
-	});
+   
     
   </script>
 </body>
